@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ratting_container {
+    display: flex;
+}
+
+span.start {
+    font-size: 40px;
+    color: #80808073;
+    cursor: pointer;
+}
+
+span.active {
+    color: green;
+}

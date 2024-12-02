@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css"
+        integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="quotes">
+        <div class="loader" id="loader"></div>
+        <div class="quote-container" id="quote-container" style="display: none;">
+            <!-- Quote -->
+            <div class="quote-text">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                <span id="quote"></span>
+            </div>
+            <!-- Author -->
+            <div class="quote-author">
+                <span id="author"></span>
+            </div>
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="twitter-button" id="twitter" title="Tweet This">
+                    <i class="fa-brands fa-twitter"></i>
+                </button>
+                <button id="new-quote">New Quote</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/3be0ead616.js" crossorigin="anonymous"></script>
+    <script src="quotes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

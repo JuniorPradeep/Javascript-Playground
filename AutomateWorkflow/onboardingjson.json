@@ -1,0 +1,120 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "position": "Software Engineer",
+            "tasks": [
+                {
+                    "taskId": 101,
+                    "title": "Complete Onboarding Documentation",
+                    "description": "Submit all required onboarding forms and agreements.",
+                    "assignedDate": "2024-11-01",
+                    "dueDate": "2024-11-05",
+                    "status": "Pending",
+                    "notifications": [
+                        {
+                            "id": 1,
+                            "message": "You have been assigned a new task: Complete Onboarding Documentation.",
+                            "type": "Task Assignment",
+                            "timestamp": "2024-11-01T10:00:00Z",
+                            "read": false
+                        }
+                    ]
+                },
+                {
+                    "taskId": 102,
+                    "title": "Set Up Development Environment",
+                    "description": "Install required software and tools for project development.",
+                    "assignedDate": "2024-11-02",
+                    "dueDate": "2024-11-07",
+                    "status": "In Progress",
+                    "notifications": [
+                        {
+                            "id": 2,
+                            "message": "Task Update: Set Up Development Environment is in progress.",
+                            "type": "Task Update",
+                            "timestamp": "2024-11-03T14:00:00Z",
+                            "read": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com",
+            "position": "HR Manager",
+            "tasks": [],
+            "notifications": [
+                {
+                    "id": 3,
+                    "message": "Employee John Doe has requested task completion for: Complete Onboarding Documentation.",
+                    "type": "Task Request",
+                    "timestamp": "2024-11-05T09:30:00Z",
+                    "read": false
+                }
+            ]
+        }
+    ],
+        "tasks": [
+            {
+                "taskId": 101,
+                "title": "Complete Onboarding Documentation",
+                "description": "Submit all required onboarding forms and agreements.",
+                "assignedTo": 1,
+                "tester": 2,
+                "assignedDate": "2024-11-01",
+                "dueDate": "2024-11-05",
+                "status": "Pending",
+                "notifications": [
+                    {
+                        "id": 1,
+                        "message": "Task assigned to John Doe.",
+                        "type": "Task Assignment",
+                        "timestamp": "2024-11-01T10:00:00Z",
+                        "read": false
+                    }
+                ]
+            },
+            {
+                "taskId": 102,
+                "title": "Set Up Development Environment",
+                "description": "Install required software and tools for project development.",
+                "assignedTo": 1,
+                "tester": 2,
+                "assignedDate": "2024-11-02",
+                "dueDate": "2024-11-07",
+                "status": "In Progress",
+                "notifications": []
+            }
+        ],
+            "notifications": [
+                {
+                    "id": 1,
+                    "message": "You have been assigned a new task: Complete Onboarding Documentation.",
+                    "type": "Task Assignment",
+                    "timestamp": "2024-11-01T10:00:00Z",
+                    "read": false,
+                    "employeeId": 1
+                },
+                {
+                    "id": 2,
+                    "message": "Task Update: Set Up Development Environment is in progress.",
+                    "type": "Task Update",
+                    "timestamp": "2024-11-03T14:00:00Z",
+                    "read": true,
+                    "employeeId": 1
+                },
+                {
+                    "id": 3,
+                    "message": "Employee John Doe has requested task completion for: Complete Onboarding Documentation.",
+                    "type": "Task Request",
+                    "timestamp": "2024-11-05T09:30:00Z",
+                    "read": false,
+                    "employeeId": 2
+                }
+            ]
+}

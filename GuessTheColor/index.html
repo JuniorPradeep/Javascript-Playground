@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="GuessColorGame">
+        <div class="scoreboard-container">
+            <div class="title">GuessTheColor</div>
+            <div class="scores">
+                <label>Score:<span id="current-score">0</span></label>
+                <label>Best Score:<span id="best-score">0</span></label>
+            </div>
+        </div>
+        <input type="text" id="guessed-color" placeholder="Enter Color Code" />
+        <span id="errorMsg"></span>
+        <div class="colorBoxContainer" id="colorbox">
+            <div class="color" style="background-color: #f34343;"></div>
+            <div class="color" style="background-color: #321a1a;"></div>
+            <div class="color" style="background-color: #200202;"></div>
+        </div>
+        <div class="game-helper">
+            <details>
+                <summary>How to Play ?</summary>
+                <p>
+                <p><b>Steps:</b></p>
+                <p>1.Enter the Guessed color Code in input.</p>
+                <p>2. Click on the Color box that should Match with your entered color.</p>
+                <p>3. if correctly guessed you score will update with 5 and if wrong answer, Game Over</p>
+                </p>
+            </details>
+        </div>
+    </div>
+    <script src="game.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="coundown_container">
+        <input type="text" class="hours" value="24" />:
+        <input type="text" class="minutes" value="35" />:
+        <input type="text" class="seconds" value="35" />:
+    </div>
+    <div class="button_container">
+        <button class="start">Start</button>
+        <button class="pause">Pause</button>
+        <button class="reset">Reset</button>
+
+    </div>
+    <script>
+        const hourEl = document.querySelector('.hours');
+        const minuteEl = document.querySelector('.minutes');
+        const secondEl = document.querySelector('.seconds');
+        const startTimer = document.querySelector('.start');
+        const pauseTimer = document.querySelector('.pause');
+        const resetTimer = document.querySelector('.reset');
+        SECONDS_IN_HOUR = 3600;
+        SECONDS_IN_MINUTE = 60;
+
+
+
+        class StartTimer {
+
+            constructor(hours, minutes, seconds) {
+                this.hours = parseInt(hours);
+                this.minutes = parseInt(minutes);
+                this.seconds = parseInt(seconds);
+                this.timer = null;
+            }
+            validateTimer() {
+                if (this.minutes > 60 || this.seconds > 60) {
+                    alert("invalid time");
+                    return false;
+                }
+                return true;
+            }
+            startTimer() {
+                let coundowntime = (this.hours * SECONDS_IN_HOUR) + (this.minutes * SECONDS_IN_MINUTE) + this.seconds;
+                let timer = setInterval(() => {
+                    if (coundowntime < 0) {
+                        alert("Timer Ends");
+                        clearInterval(timer);
+                    }
+                    coundowntime--;
+
+                }, 1000);
+            }
+            startTimer() {
+                let coundowntime = (this.hours * SECONDS_IN_HOUR) + (this.minutes * SECONDS_IN_MINUTE) + this.seconds;
+
+                this.timer = setInterval(() => {
+
+                    if (coundowntime < 0) {
+                        alert("Timer Ends");
+                        clearInterval(this.timer);
+                    }
+                    coundowntime--;
+                    this.UiUpdateOnTimer(coundowntime);
+
+                }, 1000);
+            }
+            UiUpdateOnTimer(coundowntime) {
+                const hours = Math.floor(coundowntime / 3600);
+                const minutes = Math.floor((coundowntime % 3600) / 60);
+                const seconds = Math.floor(coundowntime % 60);
+                hourEl.value = hours < 10 ? `0${hours}` : hours;
+                minuteEl.value = minutes < 10 ? `0${minutes}` : minutes;
+                secondEl.value = seconds < 10 ? `0${seconds}` : seconds;
+            }
+            pauseTimer() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+            }
+            resetTimer() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+                let coundowntime = (24 * SECONDS_IN_HOUR) + (35 * SECONDS_IN_MINUTE) + 35;
+                this.UiUpdateOnTimer(coundowntime);
+            }
+
+
+
+        }
+
+        let sttimer;
+        startTimer.addEventListener('click', () => {
+            const hours = hourEl.value;
+            const minutes = minuteEl.value;
+            const seconds = secondEl.value;
+            sttimer = new StartTimer(hours, minutes, seconds);
+            if (sttimer.validateTimer()) {
+                sttimer.startTimer();
+            }
+        });
+        pauseTimer.addEventListener('click', () => {
+            if (sttimer) sttimer.pauseTimer();
+        });
+        resetTimer.addEventListener('click', () => {
+            if (sttimer) sttimer.resetTimer();
+        });
+    </script>
+
+</body>
+
+</html>

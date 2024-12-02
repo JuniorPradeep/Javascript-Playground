@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+
+body>h1 {
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: cursive;
+    text-shadow: 3px 2px 4px black;
+}
+
+/*Loader */
+
+.loader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Image container */
+.image-container {
+    margin: 10px 30%;
+}
+
+.image-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .image-container {
+        margin: 10px !important;
+    }
+}

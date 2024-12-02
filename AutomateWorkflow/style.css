@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+#canvas-workflow {
+    position: relative;
+    width: 100%;
+    /* Canvas width */
+    height: 100vh;
+    /* Full viewport height */
+    border: 1px solid #ddd;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.node {
+    position: absolute;
+    width: 5%;
+    /* Example percentage width */
+    height: 5%;
+    /* Example percentage height */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 5vh;
+    /* Adjust for better centering text */
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.node .title {
+    font-weight: bold;
+}
+
+#connection-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
