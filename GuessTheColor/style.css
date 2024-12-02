@@ -86,3 +86,11 @@ summary {
     border-radius: 10px;
     margin: 10px 0;
 }
+
+/*Mobile device fix */
+@media screen and (max-width:769px) {
+    .GuessColorGame {
+        width: auto !important;
+    }
+
+}

@@ -8,6 +8,7 @@ let totalImages = 0;
 let loadedImages = 0;
 let ready = false;
 
+//https://github.com/JuniorPradeep/Javascript-Playground/tree/main/GuessTheColor
 
 //const SECRET_KEY = '2-lfV2Ap6sox4Su070DRw9FuC05X4-4PhjnhnmBEqbA'
 //const APP_ID = 681249
