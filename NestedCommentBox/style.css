@@ -1,0 +1,17 @@
+.commentBox {
+    border: 1px solid #3f383845;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.commentBox button {
+    background: black;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
