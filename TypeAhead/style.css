@@ -1,0 +1,115 @@
+.typeahead {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropdown {
+    padding: 10px 6px;
+    width: 60%;
+    background: #6eb94f96;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    list-style: none;
+    margin-top: 0px;
+    overflow: auto;
+    max-height: 300px;
+    font-size: 2rem;
+}
+
+#dropdown::-webkit-scrollbar {
+    width: 10px;
+    border: 1px solid #6eb94f96;
+    border-radius: 10px;
+    background: black;
+}
+
+#dropdown::-webkit-scrollbar-thumb {
+    border: none;
+    background-color: #6eb94f96;
+}
+
+
+
+#dropdown li {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    background: #fff;
+    font-weight: bold;
+    font-family: cursive;
+    border-radius: 5px;
+    box-shadow: inset 0px 22px 4px -19px #416d2e;
+}
+
+input#inputdata {
+    font-size: 2rem;
+    /* Adjust font size */
+    width: 60%;
+    padding: 10px 5px;
+    color: transparent;
+    /* Make text transparent */
+    text-shadow:
+        0 0 5px #ff6a00,
+        0 0 10px #ff4500,
+        0 0 20px #ff0000,
+        0 0 30px #ff4500,
+        0 0 40px #ff6a00,
+        0 0 50px #ff0000;
+    /* Fire-like glow */
+    background: linear-gradient(to bottom, #ff6a00, #ff4500, #ff0000);
+    -webkit-background-clip: text;
+    /* Clip the gradient to text */
+    background-clip: text;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Border in fire colors */
+    border: 1px solid #6eb94f96;
+    outline: none;
+    text-align: center;
+    animation: fire-flicker 1.5s infinite ease-in-out;
+
+}
+
+
+/* Fire flickering effect */
+@keyframes fire-flicker {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px #ff6a00,
+            0 0 10px #ff4500,
+            0 0 20px #ff0000,
+            0 0 30px #ff4500,
+            0 0 40px #ff6a00,
+            0 0 50px #ff0000;
+    }
+
+    50% {
+        text-shadow:
+            0 0 7px #ff6a00,
+            0 0 14px #ff4500,
+            0 0 28px #ff0000,
+            0 0 42px #ff4500,
+            0 0 56px #ff6a00,
+            0 0 70px #ff0000;
+    }
+}
+
+/* Placeholder flicker effect */
+@keyframes placeholder-flicker {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
