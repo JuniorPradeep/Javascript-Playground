@@ -1,0 +1,280 @@
+body {
+    background: url(bk1.gif);
+    background-repeat: no-repeat;
+    box-shadow: inset 144px 38px 20px 176px #000000a3;
+    background-size: cover;
+    margin: 0px;
+    height: 100vh;
+    border-top: 14px solid black;
+    border-bottom: 14px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+}
+
+/* Header Style */
+header {
+    display: flex;
+    justify-content: SPACE-BETWEEN;
+    background: #8f8383;
+    padding: 15px;
+    font-family: revert;
+    background: transparent;
+    border: none;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #8a2e95;
+    color: #fff;
+    font-family: cursive;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeInLeft 1.3s ease-in-out forwards;
+    animation-delay: 1.3s;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInRight 1.3s ease-in-out forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+
+header ul li {
+    box-shadow: 1px 1px 0px 6px rgb(107 75 111);
+    border-radius: 2px;
+    min-width: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header ul li a {
+    background: #fff;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    display: block;
+}
+
+header ul a:active {
+    transform: translate(0px, 0.6px);
+}
+
+header ul a:hover {
+    box-shadow: inset 1px 1px 17px 6px #8f8383;
+}
+
+/*Board Container*/
+#taskcontainer {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}
+
+.box {
+    max-height: 400px;
+    overflow: auto;
+}
+
+
+ul.drag-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+
+    border-radius: 10px;
+    gap: 2rem;
+}
+
+.add-btn {
+    font-weight: bold;
+    margin: 10px 0px;
+    max-width: 100px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+}
+
+li.drag-column {
+    color: #fff;
+    padding: 10px 20px;
+    flex: 1;
+    /* border: 1px solid #fff; */
+    box-shadow: inset 23px 28px 19px -17px;
+    background: #95632591;
+    border-radius: 10px;
+    opacity: 0;
+    animation: slide-in 2.3s ease-out forwards;
+}
+
+
+.backlog {
+    animation-delay: 0.3s;
+}
+
+.progress {
+    animation-delay: 2.7s;
+}
+
+.completed {
+    animation-delay: 3.0s;
+}
+
+.hold {
+    animation-delay: 4.3s;
+}
+
+ul.drag-item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.drag-item-list li {
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div.save {
+    display: none;
+}
+
+.add-container {
+    display: none;
+}
+
+/*
+Contaner Header
+*/
+span.header {
+    text-align: center;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 1px 0px;
+}
+
+.backlog span.header {
+    background-color: #707070d1;
+}
+
+.progress span.header {
+    background-color: #a97516;
+}
+
+.completed span.header {
+    background-color: #307030;
+}
+
+.hold span.header {
+    background-color: #8f1919;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.drag-item {
+    cursor: pointer;
+}
+
+.drag-item-list li.over {
+    padding: 50px 10px;
+    background: black;
+    color: black;
+}
+
+.drag-item-list li.over.dragging {
+    padding: 50px 10px;
+    background: black;
+    color: black;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.05;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    40% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: 0.55;
+        /* Gradually appear */
+    }
+
+    60% {
+        opacity: 0.65;
+        /* Gradually appear */
+    }
+
+    80% {
+        opacity: 0.85;
+        /* Gradually appear */
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
