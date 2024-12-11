@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Buy</title>
+</head>
+
+<body>
+    <p></p>
+    <!-- WARNING:
+        Don't make any changes outside the given function. (would fail test cases)
+        Write the required code and return the correct answer. -->
+
+    <script id="solution">
+        // complete the throttle function given below
+        function throttle(fn, time) {
+            let lastupdated;
+            return function (...args) {
+                console.log(Date.now() - lastupdated);
+                if (lastupdated && Date.now() - lastupdated >= time) {
+                    console.log("second Call");
+                    fn(...args)
+                } else {
+                    if (!lastupdated) fn(...args);
+                    lastupdated = Date.now();
+
+                }
+            }
+        }
+        function test(e) {
+            console.log("test", e);
+        }
+        const thr = throttle(test, 1000);
+        thr("test")
+        thr("test1")
+    </script>
+</body>
+
+</html>

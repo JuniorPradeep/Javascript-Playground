@@ -1,3 +1,7 @@
+
+
+
+
 const taskContainer = document.getElementById('taskcontainer');
 const dragList = document.querySelector('.drag-list');
 const backlog = document.querySelector('backlog');
@@ -74,6 +78,7 @@ function dropItem(e) {
         dragItem.classList.remove('over');
     });
 }
+
 
 function createItemEl(fragment, item, index) {
     const listItem = document.createElement('li');

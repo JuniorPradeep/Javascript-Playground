@@ -50,7 +50,7 @@
             startTimer() {
                 let coundowntime = (this.hours * SECONDS_IN_HOUR) + (this.minutes * SECONDS_IN_MINUTE) + this.seconds;
                 let timer = setInterval(() => {
-                    if (coundowntime < 0) {
+                    if (coundowntime < 1) {
                         alert("Timer Ends");
                         clearInterval(timer);
                     }
